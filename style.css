@@ -84,6 +84,11 @@ body::after {
   height: 100vh;
 }
 
+#carousel-hero {
+  position: relative;
+  overflow: hidden;
+}
+
 #carousel-hero::before {
   content: "";
   position: absolute;
@@ -124,6 +129,15 @@ body::after {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.514);
+  overflow: hidden;
+}
+
+@media (max-width: 991.98px) {
+  .menu-hero-overlay {
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-inline: 1rem;
+  }
 }
 
 .menu-title {
