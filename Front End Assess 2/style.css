@@ -1,0 +1,277 @@
+/* CSS RESETS */
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  /* background-color: #313131; */
+  background-color: #343a40;
+  color: #f3e8e2;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* stays put while scrolling */
+  inset: 0; /* top/right/bottom/left: 0 */
+  background: url("./img/bgtest.png") center/cover no-repeat;
+  filter: blur(20px);
+  transform: scale(1.06); /* avoids edge clipping from blur */
+  z-index: -1; /* behind page content */
+}
+
+/* Optional: dark tint for readability */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: -1;
+}
+
+/* EXAMPLE OF BOOTSTRAP OVERWRITE - button colours */
+.customBtnColor {
+  background-color: #4f46e5;
+  color: #fff;
+}
+.customBtnColor:hover {
+  background-color: #3730a3;
+  color: #e0e7ff;
+}
+
+/* ADDITION OF OUR OWN CUSTOM CSS WITH BOOTSTRAP */
+.icon {
+  width: 4rem;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.navbar-nav {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.navbar li a {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+}
+
+.navbar-transparent {
+  background-color: rgba(0, 0, 0, 0.281);
+  box-shadow: none !important;
+}
+
+#carousel-hero,
+#carousel-hero .carousel-inner,
+#carousel-hero .carousel-item,
+#carousel-hero img {
+  height: 100vh;
+}
+
+#carousel-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+#carousel-hero img {
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-hero-text {
+  position: absolute;
+  top: 35%;
+  left: 25%;
+  z-index: 2;
+  max-width: 1000px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  border-bottom: 2px solid transparent;
+}
+
+.carousel-hero-text h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.514);
+}
+
+.menu-title {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.menu-subtitle {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+/* Two-column */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem 2rem;
+}
+@media (min-width: 992px) {
+  .menu-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Section headings */
+.menu-heading {
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Items with dotted leaders */
+.menu-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.menu-item .item-price {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.menu-item .item-name {
+  flex: 1 1 auto;
+}
+
+/* Small print */
+.menu-note {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.about-title {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.ourstory-title {
+  letter-spacing: 0.2em !important;
+}
+
+.footer-title {
+  letter-spacing: 0.1em !important;
+}
+
+.menu-title {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.footer {
+  width: 100%;
+  line-height: 60px;
+  font-size: 14px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  user-select: none;
+}
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+.b-example-divider {
+  width: 100%;
+  height: 3rem;
+  background-color: #0000001a;
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em #0000001a, inset 0 0.125em 0.5em #00000026;
+}
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+.btn-bd-primary {
+  --bd-violet-bg: #712cf9;
+  --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+  --bs-btn-font-weight: 600;
+  --bs-btn-color: var(--bs-white);
+  --bs-btn-bg: var(--bd-violet-bg);
+  --bs-btn-border-color: var(--bd-violet-bg);
+  --bs-btn-hover-color: var(--bs-white);
+  --bs-btn-hover-bg: #6528e0;
+  --bs-btn-hover-border-color: #6528e0;
+  --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+  --bs-btn-active-color: var(--bs-btn-hover-color);
+  --bs-btn-active-bg: #5a23c8;
+  --bs-btn-active-border-color: #5a23c8;
+}
+.bd-mode-toggle {
+  z-index: 1500;
+}
+.bd-mode-toggle .bi {
+  width: 1em;
+  height: 1em;
+}
+.bd-mode-toggle .dropdown-menu .active .bi {
+  display: block !important;
+}
