@@ -137,6 +137,7 @@ body::after {
     align-items: flex-start;
     padding-top: 80px;
     padding-inline: 1rem;
+    overflow-y: auto;
   }
 }
 
